@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "budo client/index.js --open -- -p browserify-hmr"
+    "start": "budo client/index.js --open --live --css client/application.css -- -p browserify-hmr -p [ vueify/plugins/extract-css -o client/application.css ]"
   },
   "author": "",
   "license": "MIT",
   "browserify": {
-    "transform": ["babelify", "vueify", "envify"]
+    "transform": [
+      "babelify",
+      "vueify",
+      "envify"
+    ]
   },
   "dependencies": {
     "babel-preset-env": "^1.6.0",
@@ -20,5 +24,9 @@
     "envify": "^4.1.0",
     "vue": "^2.4.2",
     "vueify": "^9.4.1"
+  },
+  "devDependencies": {
+    "pug": "^2.0.0-rc.2",
+    "stylify": "^1.4.0"
   }
 }
