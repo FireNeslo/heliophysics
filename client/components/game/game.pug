@@ -1,2 +1,11 @@
 main
-  img(src="client/levels/world.svg")
+  figure(v-html="level.background")
+  fieldset.message(v-if="message.message", @click="message.close()")
+    legend.label {{message.label}}
+    .body {{message.message}}
+    .options(v-if="message.options")
+      button(
+        v-for="option in message.options",
+        @click="message.close(option)"
+      )
+        | {{ option.message }}

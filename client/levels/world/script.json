@@ -1,0 +1,36 @@
+[
+  ["click", {
+    "target": ".ca",
+    "script": [
+      ["effect", {
+        "type": "zoom",
+        "target": ".ca"
+      }],
+      ["dialogue", {
+        "label": "canada",
+        "message": "hi"
+      }],
+      ["prompt", {
+        "label": "canada",
+        "message": "should we travel to Norway?",
+        "options": [
+          {
+            "message": "yes",
+            "script": [
+              ["navigate", "norway"]
+            ]
+          },
+          {
+            "message": "no",
+            "script": [
+              ["effect", {
+                "target": ".ca.zoom",
+                "type": "zoom"
+              }]
+            ]
+          }
+        ]
+      }]
+    ]
+  }]
+]

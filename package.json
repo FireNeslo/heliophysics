@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "budo client/index.js --open --live --css client/application.css -- -p browserify-hmr -p [ vueify/plugins/extract-css -o client/application.css ]"
+    "start": "budo client/index.js --open --css client/application.css -- -p browserify-hmr -p [ vueify/plugins/extract-css -o client/application.css ]"
   },
   "author": "",
   "license": "MIT",
